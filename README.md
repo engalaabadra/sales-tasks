@@ -1,11 +1,11 @@
 # Sales
 
 ### 1. Scenario-Based Automation Design Task
-Scenario: Imagine you receive an email attachment in a specific folder, and the attachment is a PDF form containing sales data. Your goal is to create a workflow that extracts information from the PDF and updates a "Sales Records" database (such as an Excel file or SQL table).
-Task:
-Write down the steps you would take to automate this process.
-Identify the types of connectors, actions, or conditions you would use.
-Explain how you would handle errors if, for example, the email has no attachment or the PDF is missing required data.
+    Scenario: Imagine you receive an email attachment in a specific folder, and the attachment is a PDF form containing sales data. Your goal is to create a workflow that extracts information from the PDF and updates a "Sales Records" database (such as an Excel file or SQL table).
+    Task:
+    Write down the steps you would take to automate this process.
+    Identify the types of connectors, actions, or conditions you would use.
+    Explain how you would handle errors if, for example, the email has no attachment or the PDF is missing required data.
 
 ### Steps In Summery : 
     check new emails & save attachments if exist & convert file into text (extracting data from this file) -> to save this data in db 
@@ -193,33 +193,33 @@ class  ExtractingDataController extends Controller {
 ```
 ---------------------------------------------------------
 ### 2. API Integration Task
-Scenario: You have a REST API endpoint that gives a JSON response with a list of employees:
-GET https://api.example.com/employees
-Example Response:
-[
-  {
-    "id": 1,
-    "name": "John Doe",
-    "email": "john.doe@example.com",
-    "department": "Sales"
-  },
-  ...
-]
-Task:
-Write a small script (in Python, JavaScript, or a language of your choice) that:
-Retrieves the employee list from the API.
-Filters employees that belong to the "Sales" department.
-Creates a new JSON object containing only name and email of those employees.
-Saves this JSON to a local file called sales_employees.json.
+    Scenario: You have a REST API endpoint that gives a JSON response with a list of employees:
+    GET https://api.example.com/employees
+    Example Response:
+    [
+    {
+        "id": 1,
+        "name": "John Doe",
+        "email": "john.doe@example.com",
+        "department": "Sales"
+    },
+    ...
+    ]
+    Task:
+    Write a small script (in Python, JavaScript, or a language of your choice) that:
+    Retrieves the employee list from the API.
+    Filters employees that belong to the "Sales" department.
+    Creates a new JSON object containing only name and email of those employees.
+    Saves this JSON to a local file called sales_employees.json.
 
 ### Steps In Summery :
     get data & filter & return data (name , email) & save this data into file
 
 ### Steps In Details:
-1. Make a GET request to the API to retrieve the employee list.
-2. Filter employees belonging to the "Sales" department.
-3. Transform the data to keep only the name and email of "Sales" employees.
-4. Save the transformed data to a JSON file called sales_employees.json.
+    1. Make a GET request to the API to retrieve the employee list.
+    2. Filter employees belonging to the "Sales" department.
+    3. Transform the data to keep only the name and email of "Sales" employees.
+    4. Save the transformed data to a JSON file called sales_employees.json.
 
 ### Implementation
 ```
@@ -258,17 +258,17 @@ class fetchSalesEmployeesController extends Controller{
 ```
 ------------------------------------------------------------
 ### 3. Data Transformation Task (Simulating Power BI)
-Scenario: You have the following CSV file (provided as text):
-ID, Name, Sales, Region
-1, John, 2000, North
-2, Sarah, 3500, East
-3, Ali, 1800, North
-4, Mike, 4000, West
-5, Emily, 2200, East
-Questions:
-Write the SQL query to get the total sales per region.
-If this was imported into Power BI, how would you create a visualization that shows Sales by Region?
-Write a simple formula in DAX to add a new column called Bonus that gives a 5% bonus to every employee whose sales are greater than 2000.
+    Scenario: You have the following CSV file (provided as text):
+    ID, Name, Sales, Region
+    1, John, 2000, North
+    2, Sarah, 3500, East
+    3, Ali, 1800, North
+    4, Mike, 4000, West
+    5, Emily, 2200, East
+    Questions:
+    Write the SQL query to get the total sales per region.
+    If this was imported into Power BI, how would you create a visualization that shows Sales by Region?
+    Write a simple formula in DAX to add a new column called Bonus that gives a 5% bonus to every employee whose sales are greater than 2000.
 
 ### Steps:
 1. SQL Query for Total Sales per Region
@@ -304,16 +304,16 @@ This new column, Bonus, will display the calculated bonus values and can be used
 ---------------------------------------------------------------
 
 ### 4. SharePoint List Design & Logic Task
-Scenario: Imagine you're working with a SharePoint list that tracks vacation requests from employees. The list contains the following fields:
-Employee Name
-Start Date
-End Date
-Status (Pending, Approved, Rejected)
-Task:
-Write down how you would design a workflow to automatically approve vacation requests if:
-The requested number of days is less than or equal to 5.
-The employee has no overlapping vacation requests already approved.
-Describe how you would handle rejections and notify employees accordingly.
+    Scenario: Imagine you're working with a SharePoint list that tracks vacation requests from employees. The list contains the following fields:
+    Employee Name
+    Start Date
+    End Date
+    Status (Pending, Approved, Rejected)
+    Task:
+    Write down how you would design a workflow to automatically approve vacation requests if:
+    The requested number of days is less than or equal to 5.
+    The employee has no overlapping vacation requests already approved.
+    Describe how you would handle rejections and notify employees accordingly.
 
 #### Steps In Summery 
     employee can create req vacation & proccess on this operation creation , which is : if num_days_vactions this employee > 5 will reject this req (status = reject) & notify for this employee , if < 5 will approved this request creation & check if this vacation conflict with another vacations for this employee
@@ -419,11 +419,11 @@ class VacationRequestController extends Controller
 ```
 ----------------------------------------------------------------
 ### 5. General Programming Problem-Solving Task
-Takes an array of numbers as input.
-Returns a new array where each element is the product of all the numbers in the original array except the number at that position.
-Example: Input: [1, 2, 3, 4]
-Output: [24, 12, 8, 6]
-Goal: This task assesses your problem-solving skills and your understanding of programming fundamentals.
+    Takes an array of numbers as input.
+    Returns a new array where each element is the product of all the numbers in the original array except the number at that position.
+    Example: Input: [1, 2, 3, 4]
+    Output: [24, 12, 8, 6]
+    Goal: This task assesses your problem-solving skills and your understanding of programming fundamentals.
 
 #### Summery:
     The function takes an array of numbers and returns a new array where each element is the product of all the numbers except the one at the current index .
@@ -474,11 +474,11 @@ Route::post('/product-except-self', [ArrayController::class, 'productExceptSelf'
 ---------------------------------------------------------
 
 ### 6. Error Handling and Logging Task
-a list of numbers from a file, computes the average, and saves the result to another file. The script should handle the following error scenarios:
-The input file is missing.
-The input file contains non-numeric data.
-The list is empty.
-Log each error appropriately to a log file.
+    a list of numbers from a file, computes the average, and saves the result to another file. The script should handle the following error scenarios:
+    The input file is missing.
+    The input file contains non-numeric data.
+    The list is empty.
+    Log each error appropriately to a log file.
 
 ### steps :
 1. Create an Artisan Command
@@ -562,14 +562,14 @@ php artisan calculate:average
 ---------------------------------------------------------------------
 
 ### 7. Data Cleanup Task
-Scenario: You are given a CSV file with contact information. Unfortunately, the data has some inconsistencies:
-Names are sometimes in uppercase, sometimes in lowercase, and sometimes a mix.
-Phone numbers are in various formats (e.g., 123-456-7890, (123) 456 7890, 1234567890).
-There are missing values in the email column.
-Task: Write a Python script that:
-Standardizes the names to Title Case.
-Normalizes phone numbers to the format 123-456-7890.
-Removes any rows that have missing email addresses.
+    Scenario: You are given a CSV file with contact information. Unfortunately, the data has some inconsistencies:
+    Names are sometimes in uppercase, sometimes in lowercase, and sometimes a mix.
+    Phone numbers are in various formats (e.g., 123-456-7890, (123) 456 7890, 1234567890).
+    There are missing values in the email column.
+    Task: Write a Python script that:
+    Standardizes the names to Title Case.
+    Normalizes phone numbers to the format 123-456-7890.
+    Removes any rows that have missing email addresses.
 1. create a command :
 ```
 php artisan make:command CleanContactData
@@ -657,12 +657,12 @@ Write to CSV: The cleaned data is saved to cleaned_contacts.csv.
 --------------------------------------------------------------------------------------
 
 ### 8. Flowchart Task
-Scenario: You need to create a flowchart that outlines the process of approving a new project proposal in a company. The process involves:
-Initial submission by an employee.
-Review by the department head.
-Budget approval by finance.
-Final approval by the CEO.
-Task: Draw a flowchart (you can use any software or draw it by hand and take a picture) that visualizes this process.
+    Scenario: You need to create a flowchart that outlines the process of approving a new project proposal in a company. The process involves:
+    Initial submission by an employee.
+    Review by the department head.
+    Budget approval by finance.
+    Final approval by the CEO.
+    Task: Draw a flowchart (you can use any software or draw it by hand and take a picture) that visualizes this process.
 
 1. Flowchart Structure
 The flowchart has the following steps:
@@ -745,15 +745,15 @@ Assign Bronze for all other cases.
 ---------------------------------------------------------------------------------
 
 ### 10. SQL Data Extraction Task
-Scenario: You have a table called Orders with the following columns: OrderID, CustomerID, OrderDate, TotalAmount.
-Task:
-Write an SQL query to extract all orders made by a specific CustomerID between 2023-01-01 and 2023-12-31.
-Write another query to calculate the total revenue generated by all customers during the same period.
-Goal: This task will help us evaluate your ability to write SQL queries to extract and aggregate data, which is a common requirement in data analysis and reporting.
+    Scenario: You have a table called Orders with the following columns: OrderID, CustomerID, OrderDate, TotalAmount.
+    Task:
+    Write an SQL query to extract all orders made by a specific CustomerID between 2023-01-01 and 2023-12-31.
+    Write another query to calculate the total revenue generated by all customers during the same period.
+    Goal: This task will help us evaluate your ability to write SQL queries to extract and aggregate data, which is a common requirement in data analysis and reporting.
 
-Task 1: Extract Orders for a Specific CustomerID within a Date Range
-To retrieve all orders for a specific CustomerID between 2023-01-01 and 2023-12-31, you can use the following SQL query. This example uses a query in Laravel's query builder.
-
+    Task 1: Extract Orders for a Specific CustomerID within a Date Range
+    To retrieve all orders for a specific CustomerID between 2023-01-01 and 2023-12-31, you can use the following SQL query. This example uses a query in Laravel's query builder.
+#### Code
 ```
 use Illuminate\Support\Facades\DB;
 
