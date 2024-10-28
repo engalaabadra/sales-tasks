@@ -191,7 +191,7 @@ class  ExtractingDataController extends Controller {
     }
 }
 ```
-
+---------------------------------------------------------
 ### 2. API Integration Task
 Scenario: You have a REST API endpoint that gives a JSON response with a list of employees:
 GET https://api.example.com/employees
@@ -256,7 +256,7 @@ class fetchSalesEmployeesController extends Controller{
 }
 
 ```
-
+------------------------------------------------------------
 ### 3. Data Transformation Task (Simulating Power BI)
 Scenario: You have the following CSV file (provided as text):
 ID, Name, Sales, Region
@@ -300,6 +300,8 @@ Bonus = IF(sales_data[Sales] > 2000, sales_data[Sales] * 0.05, 0)
 In this formula:
 ```
 This new column, Bonus, will display the calculated bonus values and can be used for further analysis or reporting within Power BI.
+
+---------------------------------------------------------------
 
 ### 4. SharePoint List Design & Logic Task
 Scenario: Imagine you're working with a SharePoint list that tracks vacation requests from employees. The list contains the following fields:
@@ -415,7 +417,7 @@ class VacationRequestController extends Controller
     }
 }
 ```
-
+----------------------------------------------------------------
 ### 5. General Programming Problem-Solving Task
 Takes an array of numbers as input.
 Returns a new array where each element is the product of all the numbers in the original array except the number at that position.
@@ -468,6 +470,8 @@ Route::post('/product-except-self', [ArrayController::class, 'productExceptSelf'
 ```
 -- test :
     in this route will enter this array : [1, 2, 3, 4] , will return [24, 12, 8, 6]
+
+---------------------------------------------------------
 
 ### 6. Error Handling and Logging Task
 a list of numbers from a file, computes the average, and saves the result to another file. The script should handle the following error scenarios:
@@ -555,6 +559,7 @@ execution
 ```
 php artisan calculate:average
 ```
+---------------------------------------------------------------------
 
 ### 7. Data Cleanup Task
 Scenario: You are given a CSV file with contact information. Unfortunately, the data has some inconsistencies:
@@ -649,6 +654,8 @@ Normalize Phone Numbers: This uses a regular expression to strip non-digit chara
 Remove Rows with Missing Emails: The continue statement skips records without an email address.
 Write to CSV: The cleaned data is saved to cleaned_contacts.csv.
 
+--------------------------------------------------------------------------------------
+
 ### 8. Flowchart Task
 Scenario: You need to create a flowchart that outlines the process of approving a new project proposal in a company. The process involves:
 Initial submission by an employee.
@@ -687,6 +694,8 @@ The flowchart has the following steps:
     ↓
     End
     ```
+-------------------------------------------------------------------------
+
 ### 9. Conditional Logic Task
     Task: Write pseudocode that represents the following logic:
     If a customer has been a member for more than 5 years and has made purchases over $10,000, they receive a Gold membership.
@@ -733,6 +742,8 @@ Assign Bronze for all other cases.
 
     This pseudocode can be converted to an actual method in a Laravel model or service class where $customer would be an instance of a Customer model.
 
+---------------------------------------------------------------------------------
+
 ### 10. SQL Data Extraction Task
 Scenario: You have a table called Orders with the following columns: OrderID, CustomerID, OrderDate, TotalAmount.
 Task:
@@ -770,3 +781,4 @@ This will return the sum of TotalAmount for all orders within the specified date
     
     This approach ensures the data extraction and aggregation tasks are both readable and efficient within the Laravel framework.
 
+------------------------------------------------------------------
